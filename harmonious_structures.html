@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HARMONIOUS STRUCTURES — Structural Engineering</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandBg: '#F2F1ED',
+                        brandText: '#111111',
+                        brandBlue: '#324795',
+                        brandBlueHover: '#283878',
+                        brandMuted: '#666666',
+                        brandBorder: '#DCDCD8',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                        mono: ['Space Mono', 'Courier New', 'Consolas', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #F2F1ED;
+            color: #111111;
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .font-mono-custom {
+            font-family: 'Space Mono', monospace;
+            letter-spacing: 0.08em;
+        }
+
+        .border-grid {
+            border-color: #DCDCD8;
+        }
+
+        /* Subtle focus outlines */
+        a:focus-visible, button:focus-visible {
+            outline: 2px solid #324795;
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-brandBlue selection:text-white">
+
+    <!-- Header Navigation -->
+    <header class="w-full border-b border-brandBorder sticky top-0 bg-[#F2F1ED]/95 backdrop-blur-sm z-50">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-12 py-5 flex flex-wrap justify-between items-center gap-4">
+            <!-- Navigation Links -->
+            <nav class="flex items-center space-x-8 font-mono-custom text-xs font-bold uppercase tracking-widest">
+                <a href="#home" class="text-brandBlue hover:opacity-80 transition-opacity">HOME</a>
+                <a href="#projects" class="text-brandText hover:text-brandBlue transition-colors">PROJECTS</a>
+                <a href="#contact" class="text-brandText hover:text-brandBlue transition-colors">CONTACT</a>
+            </nav>
+
+            <!-- Language Selector -->
+            <div class="flex items-center space-x-4 font-mono-custom text-xs tracking-widest text-brandMuted">
+                <button class="hover:text-brandText transition-colors">SRB</button>
+                <button class="text-brandBlue font-bold underline underline-offset-4">ENG</button>
+                <button class="hover:text-brandText transition-colors">DEU</button>
+                <button class="hover:text-brandText transition-colors">TUR</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-[1400px] w-full mx-auto px-6 md:px-12">
+
+        <!-- Hero Section -->
+        <section id="home" class="py-12 md:py-20 border-b border-brandBorder">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Column Text Content -->
+                <div class="lg:col-span-5 space-y-8">
+                    <h1 class="text-5xl sm:text-6xl lg:text-[64px] font-black tracking-tight leading-[0.95] text-brandText uppercase">
+                        HARMONIOUS<br>STRUCTURES
+                    </h1>
+                    
+                    <p class="text-lg md:text-xl text-brandText leading-relaxed max-w-md font-normal">
+                        We design and engineer load-bearing structures — from the first sketch to the building permit and construction. Precision, harmony, structure.
+                    </p>
+
+                    <div class="pt-4">
+                        <a href="#contact" class="inline-flex items-center justify-between bg-brandBlue hover:bg-brandBlueHover text-white font-mono-custom text-xs uppercase font-bold tracking-widest px-8 py-5 transition-all group">
+                            <span>START A PROJECT</span>
+                            <span class="ml-4 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">↗</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column Architectural Vector Illustration -->
+                <div class="lg:col-span-7 w-full border border-brandBorder p-4 sm:p-8 bg-[#F2F1ED]">
+                    <div class="relative w-full aspect-[16/10] bg-white border border-brandBorder p-6 flex flex-col justify-between overflow-hidden shadow-sm">
+                        
+                        <!-- Top Diagram Annotations -->
+                        <div class="flex justify-between text-[10px] font-mono-custom text-brandMuted border-b border-gray-200 pb-2">
+                            <span>a) 15kN/m2</span>
+                            <span>ii b) 25kN/m2</span>
+                            <span>a)</span>
+                            <span>b)</span>
+                        </div>
+
+                        <!-- Vector Graphic SVG for Engineering Blueprint -->
+                        <svg class="w-full h-full my-auto max-h-[300px]" viewBox="0 0 600 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Grid lines -->
+                            <line x1="0" y1="50" x2="600" y2="50" stroke="#E5E7EB" stroke-dasharray="2 2" />
+                            <line x1="0" y1="120" x2="600" y2="120" stroke="#E5E7EB" stroke-dasharray="2 2" />
+                            <line x1="0" y1="180" x2="600" y2="180" stroke="#E5E7EB" stroke-dasharray="2 2" />
+
+                            <!-- Soil hatched area -->
+                            <path d="M 50 180 L 250 180 L 250 250 L 50 250 Z" fill="#F3F4F6" stroke="#D1D5DB" />
+                            <path d="M 60 180 L 80 200 M 100 180 L 120 200 M 140 180 L 160 200 M 180 180 L 200 200 M 220 180 L 240 200" stroke="#9CA3AF" stroke-width="1" />
+                            <path d="M 50 210 L 70 230 M 90 210 L 110 230 M 130 210 L 150 230 M 170 210 L 190 230 M 210 210 L 230 230" stroke="#9CA3AF" stroke-width="1" />
+
+                            <!-- Soil upper section pattern -->
+                            <rect x="250" y="120" width="100" height="60" fill="#E5E7EB" />
+
+                            <!-- Main Vertical Piles/Columns -->
+                            <rect x="235" y="50" width="15" height="180" fill="#6B7280" />
+                            <rect x="390" y="50" width="15" height="180" fill="#6B7280" />
+                            <rect x="490" y="50" width="15" height="180" fill="#6B7280" />
+
+                            <!-- Concrete Caps -->
+                            <rect x="230" y="45" width="25" height="10" fill="#1F2937" />
+                            <rect x="385" y="45" width="25" height="10" fill="#1F2937" />
+                            <rect x="485" y="45" width="25" height="10" fill="#1F2937" />
+
+                            <!-- Force Vectors / Triangles (Soil Pressure Diagrams) -->
+                            <polygon points="405,60 470,120 405,120" fill="none" stroke="#374151" stroke-width="1.5" />
+                            <path d="M 405 60 L 465 120 M 405 75 L 450 120 M 405 90 L 435 120 M 405 105 L 420 120" stroke="#324795" stroke-width="1" />
+
+                            <polygon points="505,60 580,120 505,120" fill="none" stroke="#374151" stroke-width="1.5" />
+                            <path d="M 505 60 L 575 120 M 505 75 L 560 120 M 505 90 L 545 120 M 505 105 L 530 120" stroke="#324795" stroke-width="1" />
+
+                            <!-- Dimension Arrow Lines -->
+                            <line x1="200" y1="50" x2="200" y2="180" stroke="#4B5563" stroke-width="1" />
+                            <line x1="195" y1="50" x2="205" y2="50" stroke="#4B5563" stroke-width="1" />
+                            <line x1="195" y1="180" x2="205" y2="180" stroke="#4B5563" stroke-width="1" />
+                            
+                            <!-- Springs (Elastomer supports) -->
+                            <path d="M 370 140 Q 375 135 380 140 T 390 140" fill="none" stroke="#324795" stroke-width="1.5" />
+                            <path d="M 370 160 Q 375 155 380 160 T 390 160" fill="none" stroke="#324795" stroke-width="1.5" />
+                            <path d="M 370 180 Q 375 175 380 180 T 390 180" fill="none" stroke="#324795" stroke-width="1.5" />
+                        </svg>
+
+                        <!-- Bottom Blueprint Title -->
+                        <div class="text-center italic text-xs font-serif text-brandMuted border-t border-gray-200 pt-2">
+                            Slika 1: Pritisci tla na potpornu konstrukciju i modeliranje oslonaca (uklještenja) šipova
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="projects" class="py-16 md:py-24 border-b border-brandBorder">
+            <div class="mb-12">
+                <h2 class="text-4xl md:text-5xl font-black tracking-tight text-brandText uppercase mb-4">
+                    SERVICES
+                </h2>
+                <p class="text-brandMuted text-base md:text-lg">
+                    Structural engineering from the first sketch to the final inspection.
+                </p>
+            </div>
+
+            <!-- 2x2 Services Grid with clean lines -->
+            <div class="grid grid-cols-1 md:grid-cols-2 border-t border-l border-brandBorder">
+                
+                <!-- Service 01 -->
+                <div class="p-8 md:p-12 border-r border-b border-brandBorder bg-[#F2F1ED] hover:bg-white/50 transition-colors">
+                    <span class="font-mono-custom text-brandBlue text-sm font-bold block mb-6">01</span>
+                    <h3 class="text-xl md:text-2xl font-bold text-brandText uppercase tracking-tight mb-4">
+                        ANALYSIS & DESIGN
+                    </h3>
+                    <p class="text-brandMuted leading-relaxed text-sm md:text-base">
+                        Static and dynamic analysis of concrete, steel and timber load-bearing systems to current codes and Eurocodes.
+                    </p>
+                </div>
+
+                <!-- Service 02 -->
+                <div class="p-8 md:p-12 border-r border-b border-brandBorder bg-[#F2F1ED] hover:bg-white/50 transition-colors">
+                    <span class="font-mono-custom text-brandBlue text-sm font-bold block mb-6">02</span>
+                    <h3 class="text-xl md:text-2xl font-bold text-brandText uppercase tracking-tight mb-4">
+                        SEISMIC ENGINEERING
+                    </h3>
+                    <p class="text-brandMuted leading-relaxed text-sm md:text-base">
+                        Seismic assessment, detailing and protective measures for structures in high-seismicity zones.
+                    </p>
+                </div>
+
+                <!-- Service 03 -->
+                <div class="p-8 md:p-12 border-r border-b border-brandBorder bg-[#F2F1ED] hover:bg-white/50 transition-colors">
+                    <span class="font-mono-custom text-brandBlue text-sm font-bold block mb-6">03</span>
+                    <h3 class="text-xl md:text-2xl font-bold text-brandText uppercase tracking-tight mb-4">
+                        RETROFITTING & STRENGTHENING
+                    </h3>
+                    <p class="text-brandMuted leading-relaxed text-sm md:text-base">
+                        Condition assessment of existing structures and design of measures to increase capacity and service life.
+                    </p>
+                </div>
+
+                <!-- Service 04 -->
+                <div class="p-8 md:p-12 border-r border-b border-brandBorder bg-[#F2F1ED] hover:bg-white/50 transition-colors">
+                    <span class="font-mono-custom text-brandBlue text-sm font-bold block mb-6">04</span>
+                    <h3 class="text-xl md:text-2xl font-bold text-brandText uppercase tracking-tight mb-4">
+                        SUPERVISION & CONSULTING
+                    </h3>
+                    <p class="text-brandMuted leading-relaxed text-sm md:text-base">
+                        Site supervision, design review and consulting across the full life cycle of a structure.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Procedure Section -->
+        <section class="py-16 md:py-24 border-b border-brandBorder">
+            <div class="mb-12">
+                <h2 class="text-4xl md:text-5xl font-black tracking-tight text-brandText uppercase mb-4">
+                    PROCEDURE
+                </h2>
+                <p class="text-brandMuted text-base md:text-lg mb-4">
+                    The workflow follows your country's building procedure — switch the language to see yours.
+                </p>
+                <div class="font-mono-custom text-xs tracking-widest text-brandMuted uppercase">
+                    INT / STANDARD PHASES
+                </div>
+            </div>
+
+            <!-- Procedure Cards Grid (3 on top row, 2 on bottom row) -->
+            <div class="grid grid-cols-1 md:grid-cols-3 border-t border-l border-brandBorder">
+                
+                <!-- Phase 01 -->
+                <div class="p-8 border-r border-b border-brandBorder bg-[#F2F1ED]">
+                    <span class="font-mono-custom text-brandBlue text-sm font-bold block mb-6">01</span>
+                    <h3 class="text-lg md:text-xl font-bold text-brandText uppercase tracking-tight mb-3">
+                        PRE-DESIGN
+                    </h3>
+                    <p class="text-brandMuted text-sm leading-relaxed">
+                        Site data collection and structural feasibility.
+                    </p>
+                </div>
+
+                <!-- Phase 02 -->
+                <div class="p-8 border-r border-b border-brandBorder bg-[#F2F1ED]">
+                    <span class="font-mono-custom text-brandBlue text-sm font-bold block mb-6">02</span>
+                    <h3 class="text-lg md:text-xl font-bold text-brandText uppercase tracking-tight mb-3">
+                        SCHEMATIC DESIGN
+                    </h3>
+                    <p class="text-brandMuted text-sm leading-relaxed">
+                        Load-bearing concept and preliminary analysis.
+                    </p>
+                </div>
+
+                <!-- Phase 03 -->
+                <div class="p-8 border-r border-b border-brandBorder bg-[#F2F1ED]">
+                    <span class="font-mono-custom text-brandBlue text-sm font-bold block mb-6">03</span>
+                    <h3 class="text-lg md:text-xl font-bold text-brandText uppercase tracking-tight mb-3">
+                        DETAILED DESIGN
+                    </h3>
+                    <p class="text-brandMuted text-sm leading-relaxed">
+                        Permit-ready engineering documentation.
+                    </p>
+                </div>
+
+                <!-- Phase 04 -->
+                <div class="p-8 border-r border-b border-brandBorder bg-[#F2F1ED] md:col-span-1 lg:col-span-1">
+                    <span class="font-mono-custom text-brandBlue text-sm font-bold block mb-6">04</span>
+                    <h3 class="text-lg md:text-xl font-bold text-brandText uppercase tracking-tight mb-3">
+                        CONSTRUCTION DOCUMENTS
+                    </h3>
+                    <p class="text-brandMuted text-sm leading-relaxed">
+                        Shop drawings and technical specifications.
+                    </p>
+                </div>
+
+                <!-- Phase 05 -->
+                <div class="p-8 border-r border-b border-brandBorder bg-[#F2F1ED] md:col-span-2 lg:col-span-2">
+                    <span class="font-mono-custom text-brandBlue text-sm font-bold block mb-6">05</span>
+                    <h3 class="text-lg md:text-xl font-bold text-brandText uppercase tracking-tight mb-3">
+                        CONSTRUCTION SUPERVISION
+                    </h3>
+                    <p class="text-brandMuted text-sm leading-relaxed max-w-md">
+                        Site support up to the final inspection.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="contact" class="py-16 md:py-24">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-16">
+                <!-- CTA Headline -->
+                <div class="lg:col-span-5">
+                    <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-brandText uppercase leading-[1.05]">
+                        HAVE A PROJECT<br>IN MIND?
+                    </h2>
+                </div>
+
+                <!-- CTA Subtext -->
+                <div class="lg:col-span-4">
+                    <p class="text-brandText text-lg md:text-xl leading-relaxed">
+                        Tell us the brief, the location and the documentation language — we respond within 48 hours.
+                    </p>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="lg:col-span-3 lg:text-right">
+                    <a href="mailto:contact@harmoniousstructures.com" class="inline-flex items-center justify-between border border-brandBlue text-brandBlue hover:bg-brandBlue hover:text-white font-mono-custom text-xs uppercase font-bold tracking-widest px-6 py-5 transition-all group w-full lg:w-auto">
+                        <span>START A CONVERSATION</span>
+                        <span class="ml-4 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">↗</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- World Clocks Bar -->
+            <div class="border-t border-brandBorder pt-8 pb-12">
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 text-left">
+                    <!-- Beograd -->
+                    <div>
+                        <div class="font-mono-custom text-xs tracking-widest text-brandMuted uppercase mb-1">BEOGRAD</div>
+                        <div id="clock-beograd" class="font-mono-custom text-2xl md:text-3xl font-bold text-brandBlue">--:--</div>
+                    </div>
+                    <!-- London -->
+                    <div>
+                        <div class="font-mono-custom text-xs tracking-widest text-brandMuted uppercase mb-1">LONDON</div>
+                        <div id="clock-london" class="font-mono-custom text-2xl md:text-3xl font-bold text-brandBlue">--:--</div>
+                    </div>
+                    <!-- Berlin -->
+                    <div>
+                        <div class="font-mono-custom text-xs tracking-widest text-brandMuted uppercase mb-1">BERLIN</div>
+                        <div id="clock-berlin" class="font-mono-custom text-2xl md:text-3xl font-bold text-brandBlue">--:--</div>
+                    </div>
+                    <!-- Istanbul -->
+                    <div>
+                        <div class="font-mono-custom text-xs tracking-widest text-brandMuted uppercase mb-1">ISTANBUL</div>
+                        <div id="clock-istanbul" class="font-mono-custom text-2xl md:text-3xl font-bold text-brandBlue">--:--</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full border-t border-brandBorder py-8 bg-[#F2F1ED]">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-4 font-mono-custom text-[11px] tracking-widest text-brandMuted uppercase">
+            <div>© 2026 HARMONIOUS STRUCTURES</div>
+            <div>HARMONIOUS STRUCTURES — BELGRADE, SERBIA</div>
+            <div>ALL RIGHTS RESERVED</div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Live World Clocks -->
+    <script>
+        function updateClocks() {
+            const timezones = {
+                'clock-beograd': 'Europe/Belgrade',
+                'clock-london': 'Europe/London',
+                'clock-berlin': 'Europe/Berlin',
+                'clock-istanbul': 'Europe/Istanbul'
+            };
+
+            for (const [id, tz] of Object.entries(timezones)) {
+                try {
+                    const now = new Date();
+                    const formatter = new Intl.DateTimeFormat('en-GB', {
+                        timeZone: tz,
+                        hour: '2-digit',
+                        minute: '2-digit',
+                        hour12: false
+                    });
+                    const elem = document.getElementById(id);
+                    if (elem) {
+                        elem.textContent = formatter.format(now);
+                    }
+                } catch (e) {
+                    console.error("Timezone formatting error:", e);
+                }
+            }
+        }
+
+        // Initialize clocks on window load
+        window.onload = function() {
+            updateClocks();
+            setInterval(updateClocks, 10000); // update every 10s
+        };
+    </script>
+</body>
+</html>
